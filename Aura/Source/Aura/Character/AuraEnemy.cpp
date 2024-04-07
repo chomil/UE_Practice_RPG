@@ -4,6 +4,7 @@
 
 #include <AbilitySystem/AuraAbilitySystemComponent.h>
 #include "Aura/Aura.h"
+#include <AbilitySystem/AuraAttributeSet.h>
 
 
 AAuraEnemy::AAuraEnemy()
@@ -15,7 +16,7 @@ AAuraEnemy::AAuraEnemy()
 	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
 
 
-	AttributeSet = CreateDefaultSubobject<UAttributeSet>("AttributeSet");
+	AuraAttributeSet = CreateDefaultSubobject<UAuraAttributeSet>("AuraAttributeSet");
 }
 
 void AAuraEnemy::HighlightActor()
