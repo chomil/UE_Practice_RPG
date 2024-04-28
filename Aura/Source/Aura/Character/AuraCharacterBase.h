@@ -10,6 +10,7 @@
 
 class UAbilitySystemComponent;
 class UAuraAttributeSet;
+class UGameplayEffect;
 
 
 UCLASS(Abstract)
@@ -35,4 +36,10 @@ protected:
 	TObjectPtr<UAuraAttributeSet> AuraAttributeSet;
 
 	virtual void InitAbilityActorInfo();
+
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Attribute")
+	TSubclassOf<UGameplayEffect> DefaultPrimaryAttributes;
+
+	void InitializePrimaryAttributes() const;
 };

@@ -21,7 +21,7 @@ public:
 	UAuraAttributeSet* GetAttributeSet() const { return AuraAttributeSet; }
 
 protected:
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
 
 	UPROPERTY()
